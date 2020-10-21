@@ -81,6 +81,8 @@ a {
     /*separacion entre lineas al hacer mas pequeña la imagen*/
     margin: 0 0 10px 0;
   
+    animation: rubberBand; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
   }
   
   .showcase p {
@@ -118,6 +120,7 @@ a {
     display: flex;
      /* utilizar el ancho disponible decada elemento*/
   
+    justify-content: center;
     align-items:  center;
     text-align: center;
     height: 20px;
@@ -216,22 +219,94 @@ hr {
   font-weight: normal;
 
 }
+
+     /* habildades  */
+.showhability {
+  position: relative;
+  width: 100%;
+     /* para darle altura a el espacio de donde se encuentra la imagen  */
+  height: 437px;
+     /* sitio recomendado para descargar img es (pexels.com), para centrar la imagen con su tamaño original utilizar codigo: no-repeat center center/cover*/
+ 
+     background: 
+     /* top, transparent red */ 
+     linear-gradient(
+      rgba(23, 26, 29, 0.85),
+       rgba(23, 26, 29, 0.85)
+     ),
+     /* bottom, image */
+     url("./img/showcase2.jpg") no-repeat center center/cover;
+ 
+     display: flex;
+     /* colocar todas las lineas una debajo de otra*/
+    flex-direction: column;
+   /*centrar el texto de left-right */
+    text-align: center;
+   /*centrar el texto de arriba-abajo */
+   justify-content: center;
+  /*separar elemento de la navegacion*/
+    padding-bottom: 80px;
+  /*separar elemento de la navegacion ariiba-abajo*/
+    margin-bottom: 60px;
+   
+    
+}
+.showhability2 {
+  justify-content: center;
+  display: grid;
+   /* para darle la instruccion que se requieren de 4 columnas */
+  grid-template-columns: repeat(4, 1fr);
+   /* para darle separacion entre imagenes*/
+  gap: 35px;
+   
+  margin: 70px 0;
+
+
+
+}
+.showhability2 i {
+   margin-bottom: 30px;
+   font-size: 5rem;
+}
+.showhability2 h3 {
+ 
+   font-weight: normal;
+}
+.showhability2 h1 {
+
+  color: #B1B1B1;
+  line-height: 24px;
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 1px;
+ 
+}
+
+
+
+
+
 /* Follow */
 .social {
-  /* margen de 50 en los 4 puntos*/
- margin: 50px;
+
+  margin: 50px;
+ 
+
 }
 .social p {
   /* para que el texto este centrado */
  text-align: center;
  font-size: 30px;
  margin-bottom: 20px;
+
 }
 .links {
   /* para centrar los todos los enlaces*/
+  
  display: flex;
  align-items: center;
  justify-content: center;
+ 
 }
 
 .links a {
@@ -241,7 +316,20 @@ hr {
 
 .links a i {
   /* dar tamaño icono */
- font-size: 3rem;
+ font-size: 2rem;
+ 
+
+}
+
+.footer {
+  background: #001d38;
+  color: #616161;
+  font-size: 12px;
+  padding: 20px 0;
+   /* texto centrado    */
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 20px;
 }
 @media (max-width: 700px) {
   
@@ -285,6 +373,28 @@ hr {
     text-align: center;
     padding-left:0px;
   }
+  .showhability2 {
+    grid-template-columns: repeat(1, 1fr);
+
+    text-align: center;
+    margin-top: 35%;
+    margin-bottom: 20%;
+  }
+  .showhability {
+    position: relative;
+    width: 100%;
+       /* para darle altura a el espacio de donde se encuentra la imagen  */
+    height: 787px;
+
+  }
+  .links a i {
+    /* dar tamaño icono */
+   font-size: 1.5rem;
+   
+  
+  }
+  
+
 
 }
 
